@@ -9,18 +9,17 @@ nav {
 nav .links{
   display: flex;
   color: white;
-  font-family: 'DM Sans';
+  /* font-family: 'DM Sans'; */
   width: fit-content;
-  /* margin-left: auto; */
-  /* font-family: 'Work Sans'; */
+  font-family: 'Work Sans';
 }
-nav .links > li {
+nav .links > a li{
   align-items: center;
   display: flex;
   margin-inline: 5px;
   cursor: pointer;
   padding: 3px;
 }
-nav .links > li:hover {
+nav .links > a li:hover {
   color: #3582ff;
 }
