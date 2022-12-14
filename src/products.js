@@ -15,12 +15,6 @@ export const Products = [
     ProductPrice: 25,
     ProductImage: product1
   },
-  // {
-  //   id: 2,
-  //   ProductName: 'Cap',
-  //   ProductPrice: 25,
-  //   ProductImage: product2
-  // },
   {
     id: 3,
     ProductName: 'Jacket',
