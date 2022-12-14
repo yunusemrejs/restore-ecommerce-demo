@@ -13,3 +13,6 @@ a {
 body, #root {
   min-height: 100vh;
 }
+main {
+  padding-block: 3em;
+}
