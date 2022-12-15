@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./product.css"
 
-
 export default function product(props) {
+  let cartData = props.data
+  
   return (
     <div className='product'>
       <img src={props.data.ProductImage} alt="clothing" />
@@ -11,7 +12,7 @@ export default function product(props) {
       </div>
       <div className="add">
         <span>${props.data.ProductPrice}</span>
-        <button>Add to cart</button>
+        <button onClick={() => {props.setCartProducts(props.cartProducts.concat({cartData}))}}>Add to cart</button>
       </div>
     </div>
   )

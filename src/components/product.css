@@ -22,7 +22,7 @@
 .add button {
   font-family: inherit;
   background: none;
-  border: 1px solid black;
+  border: 1.5px solid black;
   border-radius: 50em;
   padding: 0.5em 1em;
   cursor: pointer;
