@@ -12,6 +12,7 @@ export default function navbar() {
         <NavLink to="/cart">
           <li>
             <AiOutlineShopping size={18}/>
+            <span className="counter"></span>
           </li>
         </NavLink>
       </ul>

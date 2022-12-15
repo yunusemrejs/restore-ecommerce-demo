@@ -15,4 +15,5 @@ body, #root {
 }
 main {
   padding-block: 3em;
+  min-height: 90vh;
 }
