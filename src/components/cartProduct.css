@@ -29,7 +29,6 @@
   display: flex;
 }
 .product-info .text {
-  max-width: 8rem;
 }
 .product-info .title {
   margin-bottom: .5em;
@@ -40,6 +39,7 @@
   font-weight: 300;
   color: #828282;
   font-size: .85em;
+  max-width: 8rem;
 }
 .right-side-wrapper, .product-info{
   display: flex;
