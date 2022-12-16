@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Work+Sans:wght@300;400;500;600;700&display=swap'); 
+
+.cart-product-container {
+  display: flex;
+  width: 37em;
+  height: 8em;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 2px 4px 12px rgba(0,0,0,.08);
+  transition-duration: .3s;
+  font-family: 'Work Sans';
+}
+.cart-product-container:hover {
+  box-shadow: 2px 4px 20px rgba(0,0,0,.1);
+  scale: 1.06;
+}
+.cart-product-container img {
+  min-height: 100%;
+  width: 10rem;
+  object-fit: cover;
+}
+.product-details-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-inline: 2em 1em;
+}
+.product-info {
+  display: flex;
+}
+.product-info .title {
+  margin-bottom: .7em;
+  font-weight: 600;
+}
+.product-info .text {
+  max-width: 8rem;
+}
+.product-info .text >:last-child {
+  font-weight: 300;
+  color: rgb(130, 130, 130);
+}
+.right-side-wrapper, .product-info{
+  display: flex;
+  align-items: center;
+}
+.right-side-wrapper {
+  width: 8em;
+  justify-content: space-between;
+}
+.price-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 4em;
+}
+.price-options span {
+  margin-bottom: 1em;
+  font-weight: 600;
+}
+.cancel-btn {
+  background: none;
+  border: none;
+  border-radius: 50em;
+  cursor: pointer;
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: red;
+  transform: rotate(45deg);
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+  transform-origin: center;
+}
+.cancel-btn:hover {
+  transform: rotate(135deg);
+}

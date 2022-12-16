@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react'
+import CartProduct from '../../components/cartProduct';
 import { ShopContext } from '../../context/shopContext'
 import { Products } from '../../products'
 
@@ -7,17 +8,14 @@ export default function cart() {
   console.log('cartCount: ' + cartCount, sumTotal, cartItems[1]);
 
   return (
-    <div>
+    <div style={{width: '100%', height: '100%', display: 'flex', 
+      alignItems: 'center', flexDirection: 'column', gap: '20px'}}>
       {Products.map((item) => 
         {        
           if (cartItems[item.id] !== 0) 
             return (
-              <div key={item.id}>
-                <p>{item.ProductName}</p>
-                <p>{cartItems[item.id]}   </p>
-                
-                <img style={{width: '20em'}} src={item.ProductImage}/>
-              </div> 
+              <CartProduct key={item.id} img={item.ProductImage} name={item.ProductName} 
+                cartItems={cartItems[item.id]} price={item.ProductPrice}/> 
             )      
         }
       )}
