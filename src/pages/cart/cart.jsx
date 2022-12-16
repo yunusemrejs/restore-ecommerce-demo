@@ -12,14 +12,12 @@ export default function cart() {
       alignItems: 'center', flexDirection: 'column', gap: '20px'}}>
       {Products.map((item) => 
         {        
-          cartItems[item.id] !== 0 
-          ? 
+          if (cartItems[item.id] !== 0) 
+            return (
               <CartProduct key={item.id} id={item.id} img={item.ProductImage} 
                 name={item.ProductName} cartItems={cartItems[item.id]} 
                 price={item.ProductPrice} remove={removeFromCart}/> 
-            
-          :
-            <h1>Your cart is empty</h1>
+            )      
         }
       )}
     </div>
