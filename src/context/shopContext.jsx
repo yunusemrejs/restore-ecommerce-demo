@@ -13,6 +13,7 @@ const getDefaultCart = () => {
 
 export default function shopContextProvider(props) {
   const [cartItems, setCartItems] = useState(getDefaultCart())
+  const [cartCount, setCartCount] = useState(sumTotal)
 
   const addToCart = (itemId) => {
     setCartItems((prev) => ({...prev, [itemId]: prev[itemId] + 1}));
@@ -21,9 +22,15 @@ export default function shopContextProvider(props) {
     setCartItems((prev) => ({...prev, [itemId]: prev[itemId] - 1}));
   };
 
-  const contextValue = { cartItems, addToCart, removeFromCart}
+  const contextValue = { cartItems, addToCart, removeFromCart, sumTotal, cartCount}
   
-  console.log(cartItems);
+  console.log('cart items: ', cartItems);
+  
+  // counter indicator
+  let cartArr = Object.values(cartItems)
+  var sumTotal = cartArr.reduce((accumulator, val) => { return accumulator + val}, 0 )
+  console.log('cartarr and sum', cartArr, sumTotal)
+
   return (
     <ShopContext.Provider value={contextValue}>{props.children}</ShopContext.Provider>
   )

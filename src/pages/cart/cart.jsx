@@ -3,13 +3,9 @@ import { ShopContext } from '../../context/shopContext'
 import { Products } from '../../products'
 
 export default function cart() {
-  const { cartItems, addToCart, removeFromCart} = useContext(ShopContext)
-  const [cartCount, setCartCount] = useState(0)
-  //   for (let i = 1; i <= Object.keys(cartItems).length; i++) {
-  //     setCartCount(cartCount + cartItems[i])
-  // }
-  // console.log(cartCount);
-  
+  const { cartItems, addToCart, removeFromCart, cartCount, sumTotal} = useContext(ShopContext)
+  console.log('cartCount: ' + cartCount, sumTotal, cartItems[1]);
+
   return (
     <div>
       {Products.map((item) => 
@@ -27,4 +23,4 @@ export default function cart() {
       )}
     </div>
   )
-}
+      }
