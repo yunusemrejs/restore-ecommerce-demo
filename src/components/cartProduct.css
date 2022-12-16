@@ -28,16 +28,18 @@
 .product-info {
   display: flex;
 }
-.product-info .title {
-  margin-bottom: .7em;
-  font-weight: 600;
-}
 .product-info .text {
   max-width: 8rem;
 }
+.product-info .title {
+  margin-bottom: .5em;
+  font-weight: 600;
+  font-size: 1.1em;
+}
 .product-info .text >:last-child {
   font-weight: 300;
-  color: rgb(130, 130, 130);
+  color: #828282;
+  font-size: .85em;
 }
 .right-side-wrapper, .product-info{
   display: flex;
@@ -54,7 +56,7 @@
   width: 4em;
 }
 .price-options span {
-  margin-bottom: 1em;
+  margin-bottom: .5em;
   font-weight: 600;
 }
 .cancel-btn {

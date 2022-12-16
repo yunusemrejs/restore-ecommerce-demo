@@ -7,7 +7,6 @@ import './navbar.css'
 
 export default function navbar() {
   const {sumtTotal, cartCount} = useContext(ShopContext)
-  console.log(sumtTotal, cartCount)
   return (
     <nav>
       <ul className="links">
