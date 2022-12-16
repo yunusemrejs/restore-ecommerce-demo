@@ -14,9 +14,8 @@ export default function cart() {
         {        
           if (cartItems[item.id] !== 0) 
             return (
-              <CartProduct key={item.id} id={item.id} img={item.ProductImage} 
-                name={item.ProductName} cartItems={cartItems[item.id]} 
-                price={item.ProductPrice} remove={removeFromCart}/> 
+              <CartProduct key={item.id} img={item.ProductImage} name={item.ProductName} 
+                cartItems={cartItems[item.id]} price={item.ProductPrice}/> 
             )      
         }
       )}
