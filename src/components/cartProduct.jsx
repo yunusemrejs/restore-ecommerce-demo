@@ -2,7 +2,7 @@ import React from 'react'
 import './cartProduct.css'
 import {AiOutlinePlus} from 'react-icons/ai'
 
-export default function cartProduct({img, name, cartItems, price}) {
+export default function cartProduct({img, name, cartItems, price, id, remove}) {
   return (
     <div className='cart-product-container'>
       <img src={img}/>
@@ -19,7 +19,7 @@ export default function cartProduct({img, name, cartItems, price}) {
             <p>{cartItems}</p>
           </div>
         
-          <button className='cancel-btn'><AiOutlinePlus size={17}/></button>
+          <button onClick={() => remove(id)} className='cancel-btn'><AiOutlinePlus size={17}/></button>
         </div>
       </div>
     </div> 
