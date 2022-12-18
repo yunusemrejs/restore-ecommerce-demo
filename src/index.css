@@ -12,8 +12,9 @@ a {
 }
 body, #root {
   min-height: 100vh;
+  width: 100%;
+  display: flex;  
 }
 main {
-  padding-block: 3em;
-  min-height: 90vh;
+  flex-grow: 1;
 }

@@ -8,7 +8,6 @@ export default function cartProduct({img, name, cartItems, price, id, add, remov
   return (
     <div className='cart-product-container'>
       <img src={img}/>
-
       <div className="product-details-wrapper">
         <div className="product-info">
           <div className="text">  

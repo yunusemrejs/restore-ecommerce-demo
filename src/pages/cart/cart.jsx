@@ -2,13 +2,18 @@ import React, { useContext, useState } from 'react'
 import CartProduct from '../../components/cartProduct';
 import { ShopContext } from '../../context/shopContext'
 import { Products } from '../../products'
+import './cart.css'
 
 export default function cart() {
   const { cartItems, addToCart, removeFromCart, deleteFromCart, cartCount, sumTotal} = useContext(ShopContext)
   // console.log(cartCount)
   return (
-    <>
-      <div style={{width: '100%', height: '100%', display: 'flex', 
+    <div className='cart-page'>
+      <div className="checkout-sidebar">
+        <button>Procceed To Checkout</button>
+      </div>
+
+      <div className='cart-items-container' style={{width: '100%', display: 'flex', 
         alignItems: 'center', flexDirection: 'column', gap: '20px'}}>
         {Products.map((item) => 
           {        
@@ -21,7 +26,7 @@ export default function cart() {
           }
         )}
       </div>
-      
-    </>
+
+    </div>
   )
       }
