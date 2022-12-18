@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Work+Sans:wght@300;400;500;600;700&display=swap'); 
+
 .cart-page {
   height: 100%;
   display: flex;
 }
 .checkout-sidebar {
-  width: 15em;
+  width: 27rem;
   height: inherit;
   background: #eee;
   outline: black;
@@ -12,10 +14,18 @@
 }
 .checkout-sidebar button {
   width: 100%;
-  height: 4em;
-  background: rgb(239, 174, 63);
+  height: 4rem;
   border: none;
+  background: #efae3f;
   color: white;
+  cursor: pointer;
+  font-family: 'Work Sans';
+  font-size: 18px;
+  font-weight: 600;
+  transition-duration: .3s;
+}
+.checkout-sidebar button:hover {
+  background: #333;
 }
 .cart-items-container {
   width: 100%;

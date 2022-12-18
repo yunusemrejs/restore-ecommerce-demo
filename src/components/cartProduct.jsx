@@ -18,7 +18,7 @@ export default function cartProduct({img, name, cartItems, price, id, add, remov
 
         <div className="right-side-wrapper">
           <div className="price-options">
-            <span>${price * cartItems}</span>
+            <span>${(price * cartItems).toFixed(2)}</span>
 
             <div className="quantity">
               <button onClick={() => remove(id)}><FaMinus size={11}/></button>
