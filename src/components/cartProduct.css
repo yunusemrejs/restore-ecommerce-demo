@@ -27,9 +27,7 @@
 }
 .product-info {
   display: flex;
-}
-.product-info .text {
-}
+ }
 .product-info .title {
   margin-bottom: .5em;
   font-weight: 600;
@@ -58,6 +56,26 @@
 .price-options span {
   margin-bottom: .5em;
   font-weight: 600;
+}
+.price-options .quantity {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  gap: 10px;
+  transition-duration: .3s;
+}
+.price-options .quantity button {
+  width: 1.5em;
+  height: 1.5em;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.price-options .quantity button:last-child >:first-child {
+  transform: rotate(90deg) translateY(0px) translateX(2px);
+}
+.price-options .quantity button:last-child >:last-child {
+  transform: translateX(0px) translateY(-14px);
 }
 .cancel-btn {
   background: none;
