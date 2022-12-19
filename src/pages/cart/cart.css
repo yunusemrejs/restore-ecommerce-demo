@@ -5,27 +5,23 @@
   display: flex;
 }
 .checkout-sidebar {
-  width: 27rem;
-  height: inherit;
-  background: #eee;
-  outline: black;
+  min-width: 22rem;
+  height: calc(100vh - 48px);
   display: flex;
-  align-items: flex-end;
-}
-.checkout-sidebar button {
-  width: 100%;
-  height: 4rem;
-  border: none;
-  background: #efae3f;
-  color: white;
-  cursor: pointer;
-  font-family: 'Work Sans';
-  font-size: 18px;
-  font-weight: 600;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+  overflow: hidden;
   transition-duration: .3s;
+  background: #393532;
+  box-shadow: rgb(0 0 0 / 30%) 14px 12px 20px, rgb(0 0 0 / 22%) 0px 15px 12px;
 }
-.checkout-sidebar button:hover {
-  background: #333;
+.checkout-content {
+  flex-grow: 1;
+  padding: 2em 1em;
+  font-family: work sans;
+  text-transform: capitalize;
+  color: rgb(220, 218, 218);
 }
 .cart-items-container {
   width: 100%;
@@ -34,4 +30,71 @@
   flex-direction: column;
   gap: 20px;
   padding-block: 3em;
+}
+.checkout-content div.title {
+  font-size: 1.3em;
+  font-weight: 600;
+  font-family: work sans;
+  margin-bottom: 3rem;
+}
+.checkout-content div.title, .checkout-content .bill-section > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-section {
+  margin-bottom: 2em;
+}
+.card-options {
+  display: flex;
+}
+.card-options svg {
+  position: relative;
+}
+.card-options svg::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #ccc;
+  bottom: 0;
+}
+.paypal {
+  width: 75px;
+  height: 48px;
+  display: flex;
+  margin-left: 3em;
+  background: url('../../assets/paypal-white-logo.png') center 55%/contain no-repeat;
+  background: url('../../assets/paypal-white-logo (2).png') center 55%/contain no-repeat;
+  background: url('../../assets/paypal-grey-logo (2).png') center 55%/contain no-repeat;
+  background: url('../../assets/paypal-grey-logo (3).png') center 55%/contain no-repeat;
+}
+.checkout-content .bill-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  margin-top: 6em;
+}
+.checkout-content .bill-section >:last-child {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-top: 1.5em;
+  color: #f1c40f;
+}
+.checkout-sidebar button {
+  width: 100%;
+  height: 4rem;
+  border: none;
+  background: #f1c40f;
+  color: #333;
+  cursor: pointer;
+  font-family: 'DM Sans';
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition-duration: .3s;
+}
+.checkout-sidebar button:hover {
+  background: #333;
+  color: white;
 }
