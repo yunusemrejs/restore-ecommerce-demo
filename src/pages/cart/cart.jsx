@@ -22,7 +22,7 @@ export default function cart() {
           <div className="card-section">
             <p>pay with</p>
             <div className='card-options'>
-              <SiVisa size={48} color='white'/>
+              <SiVisa className='visa' size={48} color='white'/>
               <span className='paypal'></span>
             </div>
           </div>
