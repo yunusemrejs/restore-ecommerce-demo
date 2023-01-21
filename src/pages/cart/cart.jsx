@@ -7,14 +7,21 @@ import {SiVisa} from 'react-icons/si'
 import './cart.css'
 
 export default function cart() {
-  const { cartItems, addToCart, removeFromCart, deleteFromCart, cartCount, sumTotal} = useContext(ShopContext)
+  const { cartItems, addToCart, removeFromCart, deleteFromCart, cartCount, sumTotal, newItems} = useContext(ShopContext)
+  console.log('carttms:',cartItems);
+
+  function getTotal() {
+      return newItems.reduce((acc, prod) => {
+        return acc + (prod.ProductPrice * prod.quantity)
+      }, 0)
+  }
 
   return (
     <div className='cart-page'>
       <div className="checkout-sidebar">
 
         <div className="checkout-content">
-          <div className="title">
+          <div onClick={() => console.log('getshitt' ,  getTotal().toFixed(2)) } className="title">
             <p>Checkout Information</p>
             <HiOutlineShoppingCart/>
           </div>
@@ -30,7 +37,7 @@ export default function cart() {
           <div className="bill-section">
             <div>
               <div className="name">subtotal</div>
-              <div className="cost">$69.00</div>
+              <div className="cost">${getTotal().toFixed(2)}</div>
             </div>
 
             <div>
@@ -40,12 +47,12 @@ export default function cart() {
 
             <div>
               <div className="name">shipping</div>
-              <div className="cost">$69.00</div>
+              <div className="cost">$420.69</div>
             </div>
 
             <div>
               <div className="name">grand total</div>
-              <div className="cost">$69.00</div>
+              <div className="cost">${getTotal() && (489.69 + getTotal()).toFixed(2)}</div>
             </div>
           </div>
         </div>

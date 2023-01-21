@@ -27,15 +27,16 @@ export default function shopContextProvider(props) {
   const deleteFromCart = (itemId) => {
     setCartItems((prev) => ({...prev, [itemId]: 0}));
   }
+  const [newItems, setNewItems] = useState(Products)
+  const num = 3;
 
-
-  const contextValue = { cartItems, addToCart, removeFromCart, deleteFromCart, sumTotal, cartCount}
+  const contextValue = { cartItems, addToCart, removeFromCart, deleteFromCart, sumTotal, cartCount, newItems, setNewItems}
   
-  
+  console.log('ctct', cartCount);
   // counter indicator
   var cartArr = Object.values(cartItems)
   var sumTotal = cartArr.reduce((accumulator, val) => { return accumulator + val}, 0 )
-  console.log('cart items: ', cartItems, 'sum', sumTotal);
+  // console.log('cart items: ', cartItems, 'sum', sumTotal);
 
   return (
     <ShopContext.Provider value={contextValue}>{props.children}</ShopContext.Provider>

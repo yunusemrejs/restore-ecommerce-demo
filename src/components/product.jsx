@@ -5,8 +5,19 @@ import "./product.css"
 
 export default function product(props) {
   let cartData = props.data
-  const { cartItems, addToCart} = useContext(ShopContext)
-  
+  const { cartItems, addToCart, newItems, setNewItems, num} = useContext(ShopContext)
+
+  function updateCart(id) {
+    setNewItems(
+      newItems.map((item) => {
+        if(item.id === id) 
+          return {...item, quantity: item.quantity + 1};
+        else
+        return item
+      })
+    )
+ } 
+ console.log(newItems)
   return (
     <div className='product'>
       <img src={props.data.ProductImage} alt="clothing" />
@@ -17,11 +28,13 @@ export default function product(props) {
 
       <div className="add">
         <span>${props.data.ProductPrice}</span>
-        <button onClick={() => 
-          {props.setCartProducts(props.cartProducts.concat({cartData})); 
-          addToCart(props.data.id)}}>
+        <button onClick={(newItem) => {
+          props.setCartProducts(props.cartProducts.concat({cartData})); 
+          addToCart(props.data.id);
+          updateCart(props.data.id)
+          }}>
             Add to cart
-            { cartItems[props.data.id] > 0 && <>({cartItems[props.data.id]})</>}
+            { cartItems[props.data.id] > 0 && <>({props.data.quantity})</>}
         </button>
       </div>
     </div>
