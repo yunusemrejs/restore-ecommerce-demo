@@ -5,8 +5,7 @@ import { ShopContext } from "../../context/shopContext"
 
 export default function shop() {
   const [cartProducts, setCartProducts] = useState([])
-  const {newItems, setNewItems} = useContext(ShopContext)
-  console.log('from shop:', newItems)
+  const {newItems} = useContext(ShopContext)
 
   return (
     // <div style={{display: 'flex', gap: '4rem 3rem', justifyContent: 'center', 

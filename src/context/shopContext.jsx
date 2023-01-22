@@ -14,6 +14,7 @@ const getDefaultCart = () => {
 export default function shopContextProvider(props) {
   const [cartItems, setCartItems] = useState(getDefaultCart())
   const [cartCount, setCartCount] = useState(sumTotal)
+  const [cartCounter, setCartCounter] = useState(0);
 
   const addToCart = (itemId) => {
     setCartItems((prev) => ({...prev, [itemId]: prev[itemId] + 1}));
@@ -28,15 +29,21 @@ export default function shopContextProvider(props) {
     setCartItems((prev) => ({...prev, [itemId]: 0}));
   }
   const [newItems, setNewItems] = useState(Products)
-  const num = 3;
 
-  const contextValue = { cartItems, addToCart, removeFromCart, deleteFromCart, sumTotal, cartCount, newItems, setNewItems}
+  function updateCount() {
+  newItems.map(item => {
+    if(item.quantity > 0 && item.quantity <= 1){
+    return setCartCounter(cartCounter + 1)}
+    else
+    return setCartCount(cartCount)
+  })}
+
+  const contextValue = { cartItems, addToCart, removeFromCart, deleteFromCart, sumTotal, cartCount, cartCounter, setCartCounter, updateCount, newItems, setNewItems}
   
   console.log('ctct', cartCount);
   // counter indicator
   var cartArr = Object.values(cartItems)
   var sumTotal = cartArr.reduce((accumulator, val) => { return accumulator + val}, 0 )
-  // console.log('cart items: ', cartItems, 'sum', sumTotal);
 
   return (
     <ShopContext.Provider value={contextValue}>{props.children}</ShopContext.Provider>
