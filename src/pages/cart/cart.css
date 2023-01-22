@@ -3,10 +3,11 @@
 .cart-page {
   height: 100%;
   display: flex;
+  padding-left: 22rem;
 }
 .checkout-sidebar {
   min-width: 22rem;
-  height: calc(100vh - 48px);
+  height:100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -14,14 +15,17 @@
   overflow: hidden;
   transition-duration: .3s;
   background: #393532;
-  box-shadow: rgb(0 0 0 / 30%) 14px 12px 20px, rgb(0 0 0 / 22%) 0px 15px 12px;
+  box-shadow: #0000004d 14px 12px 20px, #00000038 0px 15px 12px;
+  position: fixed;
+  left: 0;
+  top: 0;
 }
 .checkout-content {
   flex-grow: 1;
   padding: 2em 1.5em;
   font-family: work sans;
   text-transform: capitalize;
-  color: rgb(220, 218, 218);
+  color: #dcdada;
 }
 .cart-items-container {
   width: 100%;
