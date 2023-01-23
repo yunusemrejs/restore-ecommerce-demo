@@ -2,6 +2,7 @@ import { Products } from "../../products"
 import Product from "../../components/product"
 import { useContext, useState } from "react"
 import { ShopContext } from "../../context/shopContext"
+import pay from '../../assets/paypal-logo-svgrepo-com.svg'
 
 export default function shop() {
   const [cartProducts, setCartProducts] = useState([])

@@ -9,6 +9,7 @@
   box-shadow: 2px 4px 12px rgba(0,0,0,.08);
   transition-duration: .3s;
   font-family: 'Work Sans';
+  font-size: 0.5em;
 }
 .cart-product-container:hover {
   box-shadow: 2px 4px 20px rgba(0,0,0,.1);
@@ -16,7 +17,7 @@
 }
 .cart-product-container img {
   min-height: 100%;
-  width: 10rem;
+  width: 10em;
   object-fit: cover;
 }
 .product-details-wrapper {

@@ -24,22 +24,26 @@ export default function product(props) {
 
   return (
     <div className='product'>
-      <img src={props.data.ProductImage} alt="clothing" />
-
-      <div className="name">
-        <p>{props.data.ProductName}</p>
+      <div className="image-container">
+        <img src={props.data.ProductImage} alt="clothing" />
       </div>
 
-      <div className="add">
-        <span>${props.data.ProductPrice}</span>
-        <button onClick={() => {
-          props.setCartProducts(props.cartProducts.concat({cartData})); 
-          addToCart(props.data.id);
-          updateCart(props.data.id)
-          }}>
-            Add to cart
-            { cartItems[props.data.id] > 0 && <>({props.data.quantity})</>}
-        </button>
+      <div className="description">
+        <div className="name">
+          <p>{props.data.ProductName}</p>
+        </div>
+
+        <div className="add">
+          <span>${props.data.ProductPrice}</span>
+          <button onClick={() => {
+            props.setCartProducts(props.cartProducts.concat({cartData})); 
+            addToCart(props.data.id);
+            updateCart(props.data.id)
+            }}>
+              Add to cart
+              { cartItems[props.data.id] > 0 && <>({props.data.quantity})</>}
+          </button>
+        </div>
       </div>
     </div>
   )
