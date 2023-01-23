@@ -3,10 +3,10 @@
 .cart-page {
   height: 100%;
   display: flex;
-  padding-left: 22rem;
+  padding-left: 22em;
 }
 .checkout-sidebar {
-  min-width: 22rem;
+  min-width: 22em;
   height:100vh;
   display: flex;
   flex-direction: column;
@@ -105,7 +105,7 @@
   color: #333;
   cursor: pointer;
   font-family: 'DM Sans';
-  font-size: 18px;
+  font-size: 1.1em;
   font-weight: 700;
   white-space: nowrap;
   transition-duration: .3s;
