@@ -18,7 +18,7 @@ export default function cart() {
 
   return (
     <div className='cart-page'>
-      <div className={`checkout-sidebar ${sidebarState ?? 'hide' }`}>
+      <div className={`checkout-sidebar ${sidebarState ? 'hide': '' }`}>
 
         <div className="checkout-content">
           <div onClick={() => console.log('getshitt' ,  getTotal().toFixed(2)) } className="title">

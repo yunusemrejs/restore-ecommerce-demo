@@ -15,7 +15,7 @@ export default function shopContextProvider(props) {
   const [cartItems, setCartItems] = useState(getDefaultCart())
   const [cartCount, setCartCount] = useState(sumTotal)
   const [cartCounter, setCartCounter] = useState(0);
-  const [sidebarState, setSidebarState] = useState(1);
+  const [sidebarState, setSidebarState] = useState(true);
 
   const addToCart = (itemId) => {
     setCartItems((prev) => ({...prev, [itemId]: prev[itemId] + 1}));
