@@ -16,7 +16,7 @@ export default function shop() {
     //     setCartProducts={setCartProducts} cartProducts={cartProducts}/>)
     //   }
     // </div>
-    <div style={{display: 'flex', gap: '4em 3em', justifyContent: 'center', 
+    <div style={{display: 'flex', gap: '2.5em 1em', justifyContent: 'center', 
         flexWrap: 'wrap', padding: '3rem 4rem' }}>
       { 
         newItems.map((item) => <Product newItems={newItems} key={item.id} data={item} 

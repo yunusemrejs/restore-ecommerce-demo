@@ -7,12 +7,12 @@ import './navbar.css'
 
 export default function navbar() {
 
-  const {sumtTotal, cartCounter} = useContext(ShopContext)
+  const {sumtTotal, cartCounter, sidebarState, setSidebarState} = useContext(ShopContext)
 
   console.log('counter:', cartCounter);
 
   return (
-    <nav>
+    <nav onClick={() => setSidebarState(!sidebarState)}>
       <ul className="links">
         <NavLink to="/">
           <li>Shop</li>

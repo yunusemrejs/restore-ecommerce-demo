@@ -7,7 +7,7 @@ import {SiVisa} from 'react-icons/si'
 import './cart.css'
 
 export default function cart() {
-  const { cartItems, addToCart, removeFromCart, deleteFromCart, cartCount, sumTotal, newItems} = useContext(ShopContext)
+  const { cartItems, addToCart, removeFromCart, deleteFromCart, cartCount, sumTotal, newItems, sidebarState, setSidebarState} = useContext(ShopContext)
   console.log('carttms:',cartItems);
 
   function getTotal() {
@@ -18,7 +18,7 @@ export default function cart() {
 
   return (
     <div className='cart-page'>
-      <div className="checkout-sidebar">
+      <div className={`checkout-sidebar ${sidebarState ?? 'hide' }`}>
 
         <div className="checkout-content">
           <div onClick={() => console.log('getshitt' ,  getTotal().toFixed(2)) } className="title">

@@ -114,3 +114,6 @@
   background: #333;
   color: white;
 }
+.hide {
+  left: -100%;
+}
