@@ -3,7 +3,7 @@
 .cart-page {
   height: 100%;
   display: flex;
-  padding-left: 22em
+  padding-left: 22em;
   transition-duration: .3s;
 }
 .checkout-sidebar {
