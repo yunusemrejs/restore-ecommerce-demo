@@ -17,7 +17,7 @@ export default function cart() {
   }
 
   return (
-    <div className='cart-page'>
+    <div className='cart-page ${!sidebarState ? 'p0': '' '>
       <div className={`checkout-sidebar ${sidebarState ? 'hide': '' }`}>
 
         <div className="checkout-content">
