@@ -1,0 +1,12 @@
+.product-container {
+  display: flex;
+  gap: 2.5em ;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 3rem 4rem;
+} 
+@media only screen and (max-width: 1220px) {
+  .product-container {
+    padding: 3em 1.5em;
+  }
+} 

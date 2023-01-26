@@ -17,11 +17,7 @@ export default function cart() {
   }
 
   return (
-<<<<<<< Updated upstream
-    <div className={`cart-page ${sidebarState ? 'p0': ''} `}>
-=======
     <div className={`cart-page ${sidebarState ? 'p0': '' }`}>
->>>>>>> Stashed changes
       <div className={`checkout-sidebar ${sidebarState ? 'hide': '' }`}>
 
         <div className="checkout-content">

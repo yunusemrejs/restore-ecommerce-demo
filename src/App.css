@@ -3,6 +3,14 @@
   display: flex;
   flex-direction: column;
 }
-main {
-  font-size: 0.6em;
-}
+
+@media only screen and (max-width: 780px) {
+  main {
+    font-size: 0.8em;
+  }
+} 
+@media only screen and (max-width: 500px) {
+  main {
+    font-size: 0.6em;
+  }
+} 
