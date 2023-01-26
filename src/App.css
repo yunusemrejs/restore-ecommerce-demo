@@ -3,7 +3,9 @@
   display: flex;
   flex-direction: column;
 }
-
+main {
+  overflow: hidden;
+}
 @media only screen and (max-width: 780px) {
   main {
     font-size: 0.8em;
