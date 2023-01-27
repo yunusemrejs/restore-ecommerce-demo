@@ -8,15 +8,7 @@ import { ShopContext } from './context/shopContext'
 import { useContext } from 'react'
   
 function App() {
-  const {sidebarState} = useContext(ShopContext)
-
-  const body = document.querySelector('body')
-
-  if (sidebarState) 
-    body.style.overflowY = 'unset'
-  else
-    body.style.overflowY = 'hidden'
-
+  
   return (
     <div className="app">
       {/* <ShopContextProvider> */}

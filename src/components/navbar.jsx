@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react'
 import {AiOutlineShopping} from 'react-icons/ai'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import { ShopContext } from '../context/shopContext'
 import {HiOutlineShoppingCart} from 'react-icons/hi'
 
@@ -9,10 +9,14 @@ import './navbar.css'
 export default function navbar() {
 
   const {sumtTotal, cartCounter, sidebarState, setSidebarState} = useContext(ShopContext)
+  const location = useLocation()
+  console.log('location:', location);
 
   return (
-    <nav >
-      <button className='sidebar-btn' onClick={() => setSidebarState(!sidebarState)}><HiOutlineShoppingCart size={20}/></button>
+    <nav style={{justifyContent: `${location.pathname === '/cart' ? '' : 'end'}`}}>
+      { location.pathname === '/cart' &&
+        <button className='sidebar-btn' onClick={() => setSidebarState(!sidebarState)}><HiOutlineShoppingCart size={20}/></button>
+      }
 
       <ul className="links">
         <NavLink to="/">
