@@ -41,7 +41,6 @@ export default function shopContextProvider(props) {
 
   const contextValue = { cartItems, addToCart, removeFromCart, deleteFromCart, sumTotal, cartCount, cartCounter, setCartCounter, updateCount, newItems, setNewItems, sidebarState, setSidebarState}
   
-  console.log('ctct', cartCount);
   // counter indicator
   var cartArr = Object.values(cartItems)
   var sumTotal = cartArr.reduce((accumulator, val) => { return accumulator + val}, 0 )

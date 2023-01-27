@@ -4,14 +4,26 @@ nav {
   background-color: #333;
   padding: 12px 1em;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+}
+nav .sidebar-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+nav .sidebar-btn svg {
+  stroke: white;
+  transition-duration: .3s;
+  font-size: 2em;
+}
+nav .sidebar-btn svg:hover {
+  stroke: #3582ff;
 }
 nav .links{
   display: flex;
   color: white;
-  /* font-family: 'DM Sans'; */
   width: fit-content;
-  font-family: 'Work Sans';
+  font-family: 'DM Sans';
 }
 nav .links > a li{
   align-items: center;

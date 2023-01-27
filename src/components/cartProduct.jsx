@@ -1,8 +1,9 @@
 import React, { useContext } from 'react'
 import './cartProduct.css'
 import {AiOutlinePlus} from 'react-icons/ai'
-import {FaMinus} from 'react-icons/fa'
 import { ShopContext } from '../context/shopContext'
+import Minus from '../assets/minus'
+import Plus from '../assets/plus'
 
 export default function cartProduct({img, name, cartItems, price, id, add, remove, del}) {
 
@@ -64,9 +65,9 @@ export default function cartProduct({img, name, cartItems, price, id, add, remov
             <span>${(price * cartItems).toFixed(2)}</span>
 
             <div className="quantity">
-              <button onClick={() => {remove(id); minus(id)}}><FaMinus size={11}/></button>
+              <button onClick={() => {remove(id); minus(id)}}><Minus/></button>
                 <p>{cartItems}</p>
-              <button onClick={() => {add(id); plus(id)}}><FaMinus size={11}/><FaMinus size={11}/></button>
+              <button onClick={() => {add(id); plus(id)}}><Plus/></button>
             </div>
           </div>
         

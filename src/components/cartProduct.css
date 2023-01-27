@@ -60,7 +60,6 @@
 }
 .price-options .quantity {
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   gap: 10px;
   transition-duration: .3s;
@@ -71,12 +70,16 @@
   border: none;
   background: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.price-options .quantity button:last-child >:first-child {
-  transform: rotate(90deg) translateY(0px) translateX(2px);
+.quantity button svg {
+  width: 1em;
+  height: 1em;
 }
-.price-options .quantity button:last-child >:last-child {
-  transform: translateX(0px) translateY(-14px);
+.quantity button:hover svg{
+  fill: #3582ff;
 }
 .cancel-btn {
   background: none;

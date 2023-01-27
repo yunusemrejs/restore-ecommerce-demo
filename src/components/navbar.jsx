@@ -2,6 +2,8 @@ import { useContext, useState } from 'react'
 import {AiOutlineShopping} from 'react-icons/ai'
 import { NavLink } from 'react-router-dom'
 import { ShopContext } from '../context/shopContext'
+import {HiOutlineShoppingCart} from 'react-icons/hi'
+
 import './navbar.css'
 
 
@@ -9,10 +11,10 @@ export default function navbar() {
 
   const {sumtTotal, cartCounter, sidebarState, setSidebarState} = useContext(ShopContext)
 
-  console.log('counter:', cartCounter);
-
   return (
-    <nav onClick={() => setSidebarState(!sidebarState)}>
+    <nav >
+      <button className='sidebar-btn' onClick={() => setSidebarState(!sidebarState)}><HiOutlineShoppingCart/></button>
+
       <ul className="links">
         <NavLink to="/">
           <li>Shop</li>

@@ -13,7 +13,6 @@
   flex-direction: column;
   justify-content: space-between;
   z-index: 1;
-  overflow: hidden;
   transition-duration: .3s;
   background: #393532;
   box-shadow: #0000004d 14px 12px 20px, #00000038 0px 15px 12px;
@@ -98,10 +97,11 @@
   position: absolute;
   top: -1.3em;
 }
+/* f84545 */
 .checkout-sidebar button {
   width: 100%;
   height: 4rem;
-  border: none;
+  border: 3px solid #f1c40f;
   background: #f1c40f;
   color: #333;
   cursor: pointer;
@@ -111,7 +111,7 @@
   white-space: nowrap;
   transition-duration: .3s;
 }
-.checkout-sidebar button:hover {
+.checkout-sidebar button:active {
   background: #333;
   color: white;
 }
@@ -120,4 +120,23 @@
 }
 .p0 {
   padding-left: 0;
+}
+.close-btn {
+  position: absolute;
+  width: 3em;
+  height: 3em;
+  border: 2px solid #ff542a;
+  border-radius: 50em;
+  right: -5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: .1s;
+}
+.close-btn svg {
+  font-size: 1.1em;
+}
+.close-btn:active {
+  transform: scale(.8);
 }

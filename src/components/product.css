@@ -32,16 +32,25 @@
 .add button {
   font-family: inherit;
   background: none;
-  border: 1.5px solid black;
+  border: 2px solid black;
   border-radius: 50em;
   padding: 0.5em 1em;
   cursor: pointer;
   transition-duration: .3s;
   min-width: 5em;
-  font-size: .7em;
 }
 .add button:hover {
   background-color: #3582ff;
   color: white;
   border-color: transparent;
 }
+@media only screen and (max-width: 800px) {
+  .add button {
+    font-size: .7em;
+  }
+} 
+@media only screen and (max-width: 600px) {
+  /* .add button {
+    font-size: .7em;
+  } */
+} 

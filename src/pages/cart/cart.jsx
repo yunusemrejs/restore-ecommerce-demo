@@ -4,11 +4,12 @@ import { ShopContext } from '../../context/shopContext'
 import { Products } from '../../products'
 import {HiOutlineShoppingCart} from 'react-icons/hi'
 import {SiVisa} from 'react-icons/si'
+import {AiOutlinePlus} from 'react-icons/ai'
+import {ImCross} from 'react-icons/im'
 import './cart.css'
 
 export default function cart() {
   const { cartItems, addToCart, removeFromCart, deleteFromCart, cartCount, sumTotal, newItems, sidebarState, setSidebarState} = useContext(ShopContext)
-  console.log('carttms:',cartItems);
 
   function getTotal() {
       return newItems.reduce((acc, prod) => {
@@ -19,6 +20,7 @@ export default function cart() {
   return (
     <div className={`cart-page ${sidebarState ? 'p0': '' }`}>
       <div className={`checkout-sidebar ${sidebarState ? 'hide': '' }`}>
+        <div  onClick={() => setSidebarState(true)} className="close-btn" style={{display: `${sidebarState? 'none' : ''}`}}><ImCross fill='#ff542a'/></div>
 
         <div className="checkout-content">
           <div onClick={() => console.log('getshitt' ,  getTotal().toFixed(2)) } className="title">
