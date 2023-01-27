@@ -1,18 +1,25 @@
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom/dist'
-import {useLocation} from 'react-router-dom'
 import Navbar from './components/navbar'
 import Cart from './pages/cart/cart'
 import Shop from './pages/shop/shop'
 import ShopContextProvider from './context/shopContext'
-
-// const location = useLocation()
-
-// console.log(location);
+import { ShopContext } from './context/shopContext'
+import { useContext } from 'react'
+  
 function App() {
+  const {sidebarState} = useContext(ShopContext)
+
+  const body = document.querySelector('body')
+
+  if (sidebarState) 
+    body.style.overflowY = 'unset'
+  else
+    body.style.overflowY = 'hidden'
+
   return (
     <div className="app">
-      <ShopContextProvider>
+      {/* <ShopContextProvider> */}
         <Router>
           <Navbar></Navbar>
           <main>
@@ -22,7 +29,7 @@ function App() {
             </Routes>
           </main>
         </Router>
-      </ShopContextProvider>
+      {/* </ShopContextProvider> */}
     </div>
   )
 }

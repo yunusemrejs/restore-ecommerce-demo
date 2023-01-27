@@ -35,6 +35,7 @@
   gap: 20px;
   padding-block: 3em;
   position: relative;
+  overflow: hidden;
 }
 .checkout-content div.title {
   font-size: 1.3em;
@@ -145,7 +146,7 @@
 .cart-items-container .bg-frost {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   top: 0;
   left: 0;
   transition-duration: .4s;

@@ -62,8 +62,7 @@ export default function cart() {
         <button>Procceed To Checkout</button>
       </div>
 
-      <div className='cart-items-container' style={{width: '100%', display: 'flex', 
-        alignItems: 'center', flexDirection: 'column', gap: '20px'}}>
+      <div className='cart-items-container'>
         {Products.map((item) => 
           {        
             if (cartItems[item.id] !== 0) 
@@ -74,7 +73,7 @@ export default function cart() {
               )      
           }
         )}
-        <div className="bg-frost" style={{backdropFilter: `blur( ${sidebarState? '0' : '10px'})`, pointerEvents: `${sidebarState? 'none' : 'unset'}`}}></div>
+        <div className="bg-frost" style={{backdropFilter: `blur( ${sidebarState? '0' : '6px'})`, pointerEvents: `${sidebarState? 'none' : 'unset'}` }}></div>
       </div>
 
     </div>
