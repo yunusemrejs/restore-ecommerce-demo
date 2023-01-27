@@ -34,6 +34,7 @@
   flex-direction: column;
   gap: 20px;
   padding-block: 3em;
+  position: relative;
 }
 .checkout-content div.title {
   font-size: 1.3em;
@@ -109,7 +110,7 @@
   font-size: 1.1em;
   font-weight: 700;
   white-space: nowrap;
-  transition-duration: .3s;
+  transition-duration: .165s;
 }
 .checkout-sidebar button:active {
   background: #333;
@@ -133,10 +134,29 @@
   justify-content: center;
   cursor: pointer;
   transition-duration: .1s;
+  transition-duration: .3s;
 }
 .close-btn svg {
   font-size: 1.1em;
 }
 .close-btn:active {
   transform: scale(.8);
+}
+.cart-items-container .bg-frost {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transition-duration: .4s;
+}
+@media screen and (max-width: 780px) {
+  .close-btn {
+    top: .5em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .close-btn {
+    top: 1em;
+  }
 }

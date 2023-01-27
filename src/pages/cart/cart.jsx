@@ -74,6 +74,7 @@ export default function cart() {
               )      
           }
         )}
+        <div className="bg-frost" style={{backdropFilter: `blur( ${sidebarState? '0' : '10px'})`, pointerEvents: `${sidebarState? 'none' : 'unset'}`}}></div>
       </div>
 
     </div>

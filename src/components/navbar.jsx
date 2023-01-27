@@ -6,14 +6,13 @@ import {HiOutlineShoppingCart} from 'react-icons/hi'
 
 import './navbar.css'
 
-
 export default function navbar() {
 
   const {sumtTotal, cartCounter, sidebarState, setSidebarState} = useContext(ShopContext)
 
   return (
     <nav >
-      <button className='sidebar-btn' onClick={() => setSidebarState(!sidebarState)}><HiOutlineShoppingCart/></button>
+      <button className='sidebar-btn' onClick={() => setSidebarState(!sidebarState)}><HiOutlineShoppingCart size={20}/></button>
 
       <ul className="links">
         <NavLink to="/">
@@ -21,7 +20,7 @@ export default function navbar() {
         </NavLink>
         <NavLink to="/cart">
           <li>
-            <AiOutlineShopping size={18}/>
+            <AiOutlineShopping size={20}/>
             <span className="counter">{sumtTotal}{!!cartCounter && cartCounter}</span>
           </li>
         </NavLink>
