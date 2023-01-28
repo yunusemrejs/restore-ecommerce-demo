@@ -56,7 +56,7 @@ export default function cartProduct({img, name, cartItems, price, id, add, remov
         <div className="product-info">
           <div className="text">  
             <p className='title'>{name}</p>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet consect facilis.</p>
           </div>
         </div>
 

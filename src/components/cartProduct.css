@@ -40,7 +40,7 @@
   font-weight: 300;
   color: #828282;
   font-size: .85em;
-  max-width: 8rem;
+  max-width: 11em;
 }
 .right-side-wrapper, .product-info{
   display: flex;
@@ -57,7 +57,7 @@
   width: 4em;
 }
 .price-options span {
-  margin-bottom: .5em;
+  margin-bottom: .7em;
   font-weight: 600;
 }
 .price-options .quantity {
@@ -113,7 +113,7 @@
     height: .7em;
   }
   .price-options .quantity {
-    gap: 5px;
+    gap: 7px;
   }
   .cancel-btn {
     width: 1em;
