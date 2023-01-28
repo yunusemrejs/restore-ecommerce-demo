@@ -49,8 +49,9 @@
   justify-content: space-between;
   align-items: center;
 }
-.card-section {
+.payment-section {
   margin-bottom: 2em;
+  font-size: 1.3em;
 }
 .card-options {
   display: flex;
@@ -83,10 +84,11 @@
   flex-direction: column;
   gap: 1.5em;
   margin-top: 5em;
+  font-size: 1.1em;
 }
 .checkout-content .bill-section >:last-child {
-  font-size: 1.2em;
-  font-weight: 600;
+  font-size: 1.4em;
+  font-weight: 700;
   margin-top: 1.5em;
   color: #f1c40f;
   position: relative;

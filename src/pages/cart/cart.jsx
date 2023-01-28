@@ -28,7 +28,7 @@ export default function cart() {
             <HiOutlineShoppingCart/>
           </div>
 
-          <div className="card-section">
+          <div className="payment-section">
             <p>pay with</p>
             <div className='card-options'>
               <SiVisa className='visa' size={48} color='white'/>
