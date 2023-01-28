@@ -3,7 +3,6 @@
 .cart-page {
   height: 100%;
   display: flex;
-  padding-left: 22em;
   transition-duration: .3s;
 }
 .checkout-sidebar {
@@ -36,6 +35,8 @@
   padding-block: 3em;
   position: relative;
   overflow: hidden;
+  transform: translateX(22em);
+  transition-duration: .3s;
 }
 .checkout-content div.title {
   font-size: 1.3em;
@@ -122,6 +123,7 @@
 }
 .p0 {
   padding-left: 0;
+  transform: translateX(0);
 }
 .close-btn {
   position: absolute;

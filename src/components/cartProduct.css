@@ -33,6 +33,9 @@
   font-weight: 600;
   font-size: 1.1em;
 }
+.product-info .text {
+  font-size: 1.1em;
+}
 .product-info .text >:last-child {
   font-weight: 300;
   color: #828282;
@@ -64,8 +67,8 @@
   transition-duration: .3s;
 }
 .price-options .quantity button {
-  width: 1.5em;
-  height: 1.5em;
+  /* width: 1.5em;
+  height: 1.5em; */
   border: none;
   background: none;
   cursor: pointer;
@@ -99,8 +102,21 @@
 .cancel-btn:hover {
   transform: rotate(135deg);
 }
-@media only screen and (max-width: 788px) {
+@media only screen and (max-width: 780px) {
   .cart-product-container {
     font-size: 0.9em;
+  }
+} 
+@media only screen and (max-width: 500px) {
+  .quantity button svg {
+    width: .7em;
+    height: .7em;
+  }
+  .price-options .quantity {
+    gap: 5px;
+  }
+  .cancel-btn {
+    width: 1em;
+    height: 1em;
   }
 } 

@@ -18,7 +18,7 @@ export default function cart() {
   }
 
   return (
-    <div className={`cart-page ${sidebarState ? 'p0': '' }`}>
+    <div className={`cart-page`}>
       <div className={`checkout-sidebar ${sidebarState ? 'hide': '' }`}>
         <div  onClick={() => setSidebarState(true)} className="close-btn" style={{display: `${sidebarState? 'none' : ''}`}}><ImCross fill='#ff542a'/></div>
 
@@ -62,7 +62,7 @@ export default function cart() {
         <button>Procceed To Checkout</button>
       </div>
 
-      <div className='cart-items-container'>
+      <div className={`cart-items-container  ${sidebarState ? 'p0': '' }`}>
         {Products.map((item) => 
           {        
             if (cartItems[item.id] !== 0) 

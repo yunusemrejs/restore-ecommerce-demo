@@ -7,7 +7,7 @@ import Plus from '../assets/plus'
 
 export default function cartProduct({img, name, cartItems, price, id, add, remove, del}) {
 
-  const {newItems, setNewItems, cartCounter, setCartCounter, updateCount} = useContext(ShopContext)
+  const {newItems, setNewItems, cartCounter, setCartCounter} = useContext(ShopContext)
 
   function plus(id) {
     setNewItems(
