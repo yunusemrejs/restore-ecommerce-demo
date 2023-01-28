@@ -21,7 +21,7 @@
   border-top-right-radius: 3px;
 }
 .product .description {
-  margin-top: 2em;
+  margin-top: 1.5em;
 }
 .add {
   display: flex;
@@ -46,11 +46,11 @@
 }
 @media only screen and (max-width: 800px) {
   .add button {
-    font-size: .7em;
+    font-size: .8em;
   }
 } 
-@media only screen and (max-width: 600px) {
-  /* .add button {
-    font-size: .7em;
-  } */
+@media only screen and (max-width: 500px) {
+  .product .name {
+    font-size: 1.1em;
+  }
 } 
