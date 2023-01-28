@@ -163,3 +163,8 @@
     top: 1em;
   }
 }
+@media only screen and (max-width: 500px) {
+  .close-btn {
+    top: 6em;
+  }
+}
