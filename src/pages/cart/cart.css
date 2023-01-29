@@ -36,7 +36,8 @@
   position: relative;
   overflow: hidden;
   transform: translateX(22em);
-  transition-duration: .3s;
+  transition-duration: .33s;
+  transition-timing-function: ease;
 }
 .checkout-content div.title {
   font-size: 1.3em;
@@ -52,22 +53,27 @@
 .payment-section {
   margin-bottom: 2em;
   font-size: 1.3em;
+  position: relative;
+}
+.payment-section p {
+  font-weight: 500;
 }
 .card-options {
   display: flex;
+  align-items: center;
   margin-top: 1em;
 }
 .paypal {
   position: relative;
 }
-.paypal::after {
-  content: '';
+.payment-section .indicator {
   position: absolute;
-  width: 100%;
+  width: 4.5em  ;
   height: 2px;
   background: #ccc;
-  left: -6.5em;
+  left: 0;
   bottom: 0;
+  transition-duration: .3s;
 }
 .paypal {
   width: 75px;
@@ -84,10 +90,10 @@
   flex-direction: column;
   gap: 1.5em;
   margin-top: 5em;
-  font-size: 1.1em;
+  font-size: 1.3em;
 }
 .checkout-content .bill-section >:last-child {
-  font-size: 1.4em;
+  font-size: 1.15em;
   font-weight: 700;
   margin-top: 1.5em;
   color: #f1c40f;
@@ -111,7 +117,7 @@
   color: #333;
   cursor: pointer;
   font-family: 'DM Sans';
-  font-size: 1.1em;
+  font-size: 16.5px;
   font-weight: 700;
   white-space: nowrap;
   transition-duration: .165s;
@@ -168,5 +174,8 @@
 @media only screen and (max-width: 500px) {
   .close-btn {
     top: 6em;
+  }
+  .payment-section p {
+    font-size: 1.4em;
   }
 }

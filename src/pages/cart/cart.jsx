@@ -10,6 +10,7 @@ import './cart.css'
 
 export default function cart() {
   const { cartItems, addToCart, removeFromCart, deleteFromCart, cartCount, sumTotal, newItems, sidebarState, setSidebarState} = useContext(ShopContext)
+  const [ payment, setPayment ] = useState('visa')
 
   function getTotal() {
       return newItems.reduce((acc, prod) => {
@@ -31,9 +32,10 @@ export default function cart() {
           <div className="payment-section">
             <p>pay with</p>
             <div className='card-options'>
-              <SiVisa className='visa' size={48} color='white'/>
-              <span className='paypal'></span>
+              <SiVisa onClick={() => setPayment('visa')} className='visa' size={48} color={`${payment === 'visa' ? 'white' : '#8a8a8a'}`}/>
+              <span onClick={() => setPayment('paypal')} className='paypal'></span>
             </div>
+            <span  className="indicator" style={{left: `${payment === 'paypal' ? '6.4em' : ''}`, width: `${payment === 'paypal' ? '6.8em' : ''}`}}></span>
           </div>
 
           <div className="bill-section">
