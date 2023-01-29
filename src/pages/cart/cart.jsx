@@ -9,13 +9,22 @@ import {ImCross} from 'react-icons/im'
 import './cart.css'
 
 export default function cart() {
-  const { cartItems, addToCart, removeFromCart, deleteFromCart, cartCount, sumTotal, newItems, sidebarState, setSidebarState} = useContext(ShopContext)
+  const { cartItems, addToCart, removeFromCart, deleteFromCart, newItems, setNewItems, sidebarState, setSidebarState, setCartCounter, cartCounter} = useContext(ShopContext)
   const [ payment, setPayment ] = useState('visa')
 
   function getTotal() {
       return newItems.reduce((acc, prod) => {
         return acc + (prod.ProductPrice * prod.quantity)
       }, 0)
+  }
+
+  function clearCart() {
+    setCartCounter(0)
+    setNewItems(
+      newItems.map(item => {
+        return {...item, quantity : 0}
+      })
+    )
   }
 
   return (
@@ -65,9 +74,9 @@ export default function cart() {
       </div>
 
       <div className={`cart-items-container  ${sidebarState ? 'p0': '' }`}>
-        {Products.map((item) => 
+        {newItems.map((item) => 
           {        
-            if (cartItems[item.id] !== 0) 
+            if (item.quantity !== 0) 
               return (
                 <CartProduct key={item.id} id={item.id} img={item.ProductImage} name={item.ProductName} 
                   cartItems={cartItems[item.id]} price={item.ProductPrice} add={addToCart}
@@ -75,6 +84,8 @@ export default function cart() {
               )      
           }
         )}
+        { cartCounter > 1 && <button onClick={() => clearCart()} className="clear-btn">Empty Cart</button>}
+        { !cartCounter && <h1 style={{fontFamily: 'DM Sans', marginTop: '4em'}}>Your Cart Is Empty 😔</h1>}
         <div className="bg-frost" style={{backdropFilter: `blur( ${sidebarState? '0' : '6px'})`, pointerEvents: `${sidebarState? 'none' : 'unset'}` }}></div>
       </div>
 

@@ -153,6 +153,22 @@
 .close-btn:active {
   transform: scale(.8);
 }
+.clear-btn {
+  padding: 1em 13em;
+  margin-top: 2em;
+  border: none;
+  border-radius: 3px;
+  background: #333;
+  color: white;
+  transition-duration: .3s;
+  font-family: 'DM Sans';
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.clear-btn:hover {
+  background: rgb(249, 74, 61);
+  transform: scale(1.05);
+}
 .cart-items-container .bg-frost {
   position: absolute;
   width: 100vw;
@@ -164,6 +180,9 @@
 @media screen and (max-width: 780px) {
   .close-btn {
     top: .5em;
+  }
+  .clear-btn {
+    font-size: 1.07em;
   }
 }
 @media screen and (max-width: 500px) {

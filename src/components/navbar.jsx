@@ -10,7 +10,6 @@ export default function navbar() {
 
   const {sumtTotal, cartCounter, sidebarState, setSidebarState} = useContext(ShopContext)
   const location = useLocation()
-  console.log('location:', location);
 
   return (
     <nav style={{justifyContent: `${location.pathname === '/cart' ? '' : 'end'}`}}>
@@ -25,7 +24,7 @@ export default function navbar() {
         <NavLink to="/cart">
           <li>
             <AiOutlineShopping size={20}/>
-            <span className="counter">{sumtTotal}{!!cartCounter && cartCounter}</span>
+            <span className="counter">{!!cartCounter && cartCounter}</span>
           </li>
         </NavLink>
       </ul>

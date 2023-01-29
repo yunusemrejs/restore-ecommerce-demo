@@ -41,7 +41,7 @@ export default function product(props) {
             updateCart(props.data.id)
             }}>
               Add to cart
-              { cartItems[props.data.id] > 0 && <>({props.data.quantity})</>}
+              { !!newItems[props.data.id - 1].quantity && ` (${newItems[props.data.id - 1].quantity})`}
           </button>
         </div>
       </div>
