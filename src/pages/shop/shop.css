@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Work+Sans:wght@300;400;500;600;700&display=swap'); 
+
 .product-container {
   display: flex;
   gap: 2.5em ;
@@ -5,6 +7,42 @@
   flex-wrap: wrap;
   padding: 3rem 4rem;
 } 
+.credits {
+  font-family: 'DM Sans';
+  text-transform: capitalize;
+  margin-block: 2em 2em;
+  margin-inline: auto;
+  text-align: center;
+}
+.credits p {
+  transform: translateY(10em);
+  display: inline;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.credits .heart {
+  fill: #fb6161;
+}
+.credits .name {
+  color: #618ffb;
+  margin-left: 3px;
+}
+.credits .name:hover {
+  text-decoration: underline;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+.react:hover svg {
+  animation: rotation 2s infinite linear;
+}
 @media only screen and (max-width: 1220px) {
   .product-container {
     padding: 3em 1.5em;
