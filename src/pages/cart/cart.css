@@ -178,4 +178,7 @@
   .payment-section p {
     font-size: 1.4em;
   }
+  .checkout-sidebar button {
+    font-size: 13.5px;
+  }
 }
