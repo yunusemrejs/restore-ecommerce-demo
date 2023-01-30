@@ -21,12 +21,12 @@ export default function shop() {
       </div>
       
       <div className="credits">
-        made with
-        <Heart/> and
+        <span>made with</span>
+        <Heart/> <span>and</span>
         <a className="react" href="https://reactjs.org/"  target="_blank">
-        <SiReact color="#618ffb" size={'1.4em'} style={{marginInline: '3px'}}/>
+        <SiReact color="#618ffb" size={'1.4em'}/>
         </a> 
-        by<a className="name" href="https://github.com/Steve-bro" target="_blank">Steve</a>
+        <span>by</span><a className="name" href="https://github.com/Steve-bro" target="_blank">Steve</a>
       </div>
     </>
   )
