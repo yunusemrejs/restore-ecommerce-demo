@@ -13,6 +13,7 @@
   justify-content: space-between;
   z-index: 1;
   transition-duration: .3s;
+  transition-timing-function: ease;
   background: #393532;
   box-shadow: #0000004d 14px 12px 20px, #00000038 0px 15px 12px;
   position: fixed;
