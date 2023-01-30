@@ -14,6 +14,7 @@ body, #root {
   min-height: 100vh;
   width: 100%;
   display: flex;  
+  --webkit-tap-highlight-color: transparent;
 }
 main {
   flex-grow: 1;
