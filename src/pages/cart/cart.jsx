@@ -6,11 +6,14 @@ import {HiOutlineShoppingCart} from 'react-icons/hi'
 import {SiVisa} from 'react-icons/si'
 import {AiOutlinePlus} from 'react-icons/ai'
 import {ImCross} from 'react-icons/im'
+import Paypal from '../../assets/paypal';
 import './cart.css'
 
 export default function cart() {
   const { cartItems, addToCart, removeFromCart, deleteFromCart, newItems, setNewItems, sidebarState, setSidebarState, setCartCounter, cartCounter} = useContext(ShopContext)
   const [ payment, setPayment ] = useState('visa')
+
+  const width = window.innerWidth
 
   function getTotal() {
       return newItems.reduce((acc, prod) => {
@@ -41,10 +44,12 @@ export default function cart() {
           <div className="payment-section">
             <p>pay with</p>
             <div className='card-options'>
-              <SiVisa onClick={() => setPayment('visa')} className='visa' size={48} color={`${payment === 'visa' ? 'white' : '#8a8a8a'}`}/>
-              <span onClick={() => setPayment('paypal')} className='paypal'></span>
+              <SiVisa onClick={() => setPayment('visa')} className='visa' size={85} color={`${payment === 'visa' ? 'white' : '#8a8a8a'}`}/>
+              {/* <span onClick={() => setPayment('paypal')} className='paypal'></span> */}
+              <Paypal setPay={setPayment} payment={payment}></Paypal> 
+
             </div>
-            <span  className="indicator" style={{left: `${payment === 'paypal' ? '6.4em' : ''}`, width: `${payment === 'paypal' ? '6.8em' : ''}`}}></span>
+            <span  className="indicator" style={{left: `${payment === 'paypal' ? width <= 500 ? '7.1em' : '6.4em' : ''}`, width: `${payment === 'paypal' ? '6.8em' : ''}`}}></span>
           </div>
 
           <div className="bill-section">

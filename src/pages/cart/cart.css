@@ -63,27 +63,14 @@
   align-items: center;
   margin-top: 1em;
 }
-.paypal {
-  position: relative;
-}
 .payment-section .indicator {
   position: absolute;
   width: 4.5em  ;
   height: 2px;
   background: #ccc;
   left: 0;
-  bottom: 0;
+  bottom: 22px;
   transition-duration: .3s;
-}
-.paypal {
-  width: 75px;
-  height: 48px;
-  display: flex;
-  margin-left: 3em;
-  background: url('../../assets/paypal-white-logo.png') center 55%/contain no-repeat;
-  background: url('../../assets/paypal-white-logo (2).png') center 55%/contain no-repeat;
-  background: url('../../assets/paypal-grey-logo (2).png') center 55%/contain no-repeat;
-  background: url('../../assets/paypal-grey-logo (3).png') center 55%/contain no-repeat;
 }
 .checkout-content .bill-section {
   display: flex;
@@ -99,7 +86,6 @@
   color: #f1c40f;
   position: relative;
 }
-
 .checkout-content .bill-section >:last-child::before {
   content: '';
   width: 100%;
@@ -184,10 +170,12 @@
   .clear-btn {
     font-size: 1.07em;
   }
-}
-@media screen and (max-width: 500px) {
-  .close-btn {
-    top: 1em;
+  .card-options .visa {
+    height: 70px;
+    width: 70px;
+  }
+  .card-options .paypal {
+    height: 100px
   }
 }
 @media only screen and (max-width: 500px) {
@@ -199,5 +187,12 @@
   }
   .checkout-sidebar button {
     font-size: 13.5px;
+  }
+  .card-options .visa {
+    height: 55px;
+    width: 55px;
+  }
+  .card-options .paypal {
+    height: 85px
   }
 }
