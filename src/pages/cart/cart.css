@@ -154,7 +154,7 @@
   cursor: pointer;
 }
 .clear-btn:hover {
-  background: rgb(249, 74, 61);
+  background: #f94a3d;
   transform: scale(1.05);
 }
 .cart-items-container .bg-frost {
@@ -184,6 +184,14 @@
   .close-btn {
     top: 6em;
   }
+  .clear-btn:hover{
+    transform: unset;
+    background: #333;
+  }
+  .clear-btn:active {
+    transform: scale(0.9);
+    background: #f94a3d;
+  }
   .payment-section p {
     font-size: 1.4em;
   }
@@ -196,5 +204,17 @@
   }
   .card-options .paypal {
     height: 85px
+  }
+}
+@media only screen and (max-height: 750px) {
+  .checkout-sidebar {
+    overflow-y: scroll;
+  }
+  .checkout-content .bill-section {
+    margin-top: 2em;
+  }
+  .checkout-sidebar button {
+    margin-top: 3em;
+    padding-block: 1.2em;
   }
 }

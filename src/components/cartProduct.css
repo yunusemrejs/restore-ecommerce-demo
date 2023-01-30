@@ -6,12 +6,12 @@
   height: 8em;
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: 2px 4px 12px rgba(0,0,0,.08);
+  box-shadow: 2px 4px 12px #00000014;
   transition-duration: .3s;
   font-family: 'Work Sans'
 }
 .cart-product-container:hover {
-  box-shadow: 2px 4px 20px rgba(0,0,0,.1);
+  box-shadow: 2px 4px 20px #0000001a;
   scale: 1.06;
 }
 .cart-product-container img {

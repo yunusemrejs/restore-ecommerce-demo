@@ -18,7 +18,7 @@ export default function cartProduct({img, name, cartItems, price, id, add, remov
         else
         return item
       })
-      )
+    )
  } 
 
   function minus(id) {
@@ -33,7 +33,7 @@ export default function cartProduct({img, name, cartItems, price, id, add, remov
         else
         return item
       })
-      )
+    )
  } 
 
   function yeet(id) {
@@ -46,7 +46,7 @@ export default function cartProduct({img, name, cartItems, price, id, add, remov
         else
         return item
       })
-      )
+    )
  } 
 
   return (

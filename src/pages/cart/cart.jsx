@@ -91,7 +91,7 @@ export default function cart() {
         )}
         { cartCounter > 1 && <button onClick={() => clearCart()} className="clear-btn">Empty Cart</button>}
         { !cartCounter && <h1 style={{fontFamily: 'DM Sans', marginTop: '4em'}}>Your Cart Is Empty 😔</h1>}
-        <div className="bg-frost" style={{backdropFilter: `blur( ${sidebarState? '0' : '6px'})`, pointerEvents: `${sidebarState? 'none' : 'unset'}` }}></div>
+        <div className="bg-frost" onClick={() => setSidebarState(true)} style={{backdropFilter: `blur( ${sidebarState? '0' : '6px'})`, pointerEvents: `${sidebarState? 'none' : 'unset'}` }}></div>
       </div>
 
     </div>
