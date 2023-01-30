@@ -206,7 +206,7 @@
     height: 85px
   }
 }
-@media only screen and (max-height: 750px) {
+@media only screen and (max-height: 500px) {
   .checkout-sidebar {
     overflow-y: scroll;
   }
