@@ -141,7 +141,7 @@
   transform: scale(.8);
 }
 .clear-btn {
-  padding: 1em 13em;
+  padding: .6em 9.6em;
   margin-top: 2em;
   border: none;
   border-radius: 3px;
@@ -149,7 +149,8 @@
   color: white;
   transition-duration: .3s;
   font-family: 'DM Sans';
-  font-size: 1.2em;
+  font-size: 1.5em;
+  font-weight: 700;
   cursor: pointer;
 }
 .clear-btn:hover {
@@ -169,7 +170,7 @@
     top: .5em;
   }
   .clear-btn {
-    font-size: 1.07em;
+    font-size: 1.35em;
   }
   .card-options .visa {
     height: 70px;
