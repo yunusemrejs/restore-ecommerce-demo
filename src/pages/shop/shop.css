@@ -70,6 +70,9 @@
   .credits span:first-child {
     margin-right: 16px;
   }
+  .react {
+    bottom: -3px;
+  }
   .credits span:nth-child(3) {
     margin-right: 20px;
   }
