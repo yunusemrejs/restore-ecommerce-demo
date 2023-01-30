@@ -206,7 +206,7 @@
     height: 85px
   }
 }
-@media only screen and (max-height: 500px) {
+/* @media only screen and (max-height: 500px) {
   .checkout-sidebar {
     overflow-y: scroll;
   }
@@ -217,4 +217,4 @@
     margin-top: 3em;
     padding-block: 1.2em;
   }
-}
+} */
