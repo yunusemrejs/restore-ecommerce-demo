@@ -39,7 +39,7 @@
   right: 4.3em;
   bottom: -4px;
 }
-.react:hover svg {
+.react svg {
   animation: rotation 2s infinite linear;
 }
 @keyframes rotation {
