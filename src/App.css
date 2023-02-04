@@ -9,11 +9,16 @@ main {
   flex-direction: column;
   justify-content: space-between;
 }
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 1220px) {
   main {
     font-size: 0.8em;
   }
 } 
+/* @media only screen and (max-width: 780px) {
+  main {
+    font-size: 0.8em;
+  }
+}  */
 @media only screen and (max-width: 500px) {
   main {
     font-size: 0.6em;

@@ -33,13 +33,10 @@ export default function cart() {
   return (
     <div className={`cart-page`}>
       <div className={`checkout-sidebar ${sidebarState ? 'hide': '' }`}>
-        {/* <div onClick={() => setSidebarState(true)} className="close-btn" style={{display: `${sidebarState? 'none' : ''}`}}><ImCross fill='#ff542a'/></div> */}
-
         <div className="checkout-content">
-          <div onClick={() => console.log('getshitt' ,  getTotal().toFixed(2)) } className="title">
+          <div className="title">
             <p>Checkout Information</p>
-            {/* <HiOutlineShoppingCart/> */}
-            <div className="cls-btn" onClick={() => setSidebarState(true)}  style={{display: `${sidebarState? 'none' : ''}`}}><ImCross fill='#ff542a'/></div>
+            <div className="cls-btn" onClick={() => setSidebarState(true)}><ImCross fill='#ff542a'/></div>
           </div>
 
           <div className="payment-section">
