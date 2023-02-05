@@ -232,9 +232,6 @@
   }
 }
 @media only screen and (max-width: 1220px) {
-  .checkout-content {
-    font-size: .8em;
-  }
   .card-options svg:first-child {
     width: 65px;
     height: 65px;
@@ -259,7 +256,7 @@
     margin-top: 5em !important;
   }
 }
-@media only screen and (max-width: 500px) and (max-height: 570px) {
+@media only screen and (max-width: 500px) and (max-height: 600px) {
   .checkout-sidebar {
     overflow-y: scroll !important;
   }
