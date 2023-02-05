@@ -9,9 +9,9 @@ main {
   flex-direction: column;
   justify-content: space-between;
 }
-@media only screen and (max-width: 1240px) {
+@media only screen and (max-width: 1260px) {
   main {
-    font-size: 0.8em;
+    font-size: 0.75em;
   }
 } 
 /* @media only screen and (max-width: 780px) {
