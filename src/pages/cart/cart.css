@@ -240,12 +240,15 @@
     width: 100px;
     height: 100px;
   }
-}@media only screen and (max-height: 700px) and (max-width: 780px) {
-  .checkout-sidebar {
-    overflow-y: scroll;
-  }
+}
+@media screen and (max-height: 835px) {
   .checkout-content .bill-section {
     margin-top: 2em;
+  }
+}
+@media only screen and (max-height: 700px){
+  .checkout-sidebar {
+    overflow-y: scroll;
   }
 }
 @media only screen and (max-width: 500px) {
