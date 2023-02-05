@@ -232,9 +232,6 @@
   }
 }
 @media only screen and (max-width: 1220px) {
-  .checkout-content {
-    font-size: .8em;
-  }
   .card-options svg:first-child {
     width: 65px;
     height: 65px;
