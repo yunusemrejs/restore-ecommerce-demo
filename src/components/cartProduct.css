@@ -104,6 +104,10 @@
   .cart-product-container {
     font-size: 0.9em;
   }
+  .cart-product-container:hover {
+    box-shadow: 2px 4px 12px #00000014;
+    transform: scale(1);
+  }
 } 
 @media only screen and (max-width: 500px) {
   .quantity button svg {

@@ -251,7 +251,7 @@
 @media only screen and (max-width: 500px) {
   .checkout-sidebar {
     overflow-y: unset !important;
-    font-size: 1.2em;
+    font-size: 1.15em;
   }
   .checkout-content .bill-section {
     margin-top: 5em !important;
