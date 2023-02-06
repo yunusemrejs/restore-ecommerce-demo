@@ -38,6 +38,7 @@
   cursor: pointer;
   transition-duration: .3s;
   min-width: 5em;
+  white-space: nowrap;
 }
 .add button:hover {
   background-color: #3582ff;

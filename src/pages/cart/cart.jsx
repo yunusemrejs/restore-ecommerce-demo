@@ -43,7 +43,6 @@ export default function cart() {
             <p>pay with</p>
             <div className='card-options'>
               <SiVisa onClick={() => setPayment('visa')} className='visa' size={85} color={`${payment === 'visa' ? 'white' : '#8a8a8a'}`}/>
-              {/* <span onClick={() => setPayment('paypal')} className='paypal'></span> */}
               <Paypal setPay={setPayment} payment={payment}></Paypal> 
 
             </div>

@@ -6,14 +6,15 @@ import {HiOutlineShoppingCart} from 'react-icons/hi'
 
 import './navbar.css'
 
-export default function navbar() {
+export default function navbar({location}) {
 
   const {sumtTotal, cartCounter, sidebarState, setSidebarState} = useContext(ShopContext)
-  const location = useLocation()
+  const loc = useLocation()
 
+  location(loc.pathname) 
   return (
-    <nav style={{justifyContent: `${location.pathname === '/cart' ? '' : 'end'}`}}>
-      { location.pathname === '/cart' &&
+    <nav style={{justifyContent: `${loc.pathname === '/cart' ? '' : 'end'}`}}>
+      { loc.pathname === '/cart' &&
         <button className='sidebar-btn' onClick={() => setSidebarState(!sidebarState)}><HiOutlineShoppingCart size={20}/></button>
       }
 
