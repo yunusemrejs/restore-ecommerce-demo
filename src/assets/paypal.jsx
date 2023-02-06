@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function paypal({setPay, payment}) {
   return (
-    <svg className='paypal' style={{marginLeft: '3em'}} onClick={() => setPay('paypal')} fill={`${payment === 'paypal' ? 'white' : '#8a8a8a'}`} version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" height="115px" viewBox="0 0 50.406 50.407" xmlSpace="preserve">
+    <svg className='paypal' height={'133px'} style={{marginLeft: '3em'}} onClick={() => setPay('paypal')} fill={`${payment === 'paypal' ? 'white' : '#8a8a8a'}`} version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 50.406 50.407" xmlSpace="preserve">
 
     <g id="SVGRepo_bgCarrier" strokeWidth="0"/>
 

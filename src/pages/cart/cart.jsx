@@ -44,9 +44,8 @@ export default function cart() {
             <div className='card-options'>
               <SiVisa onClick={() => setPayment('visa')} className='visa' size={85} color={`${payment === 'visa' ? 'white' : '#8a8a8a'}`}/>
               <Paypal setPay={setPayment} payment={payment}></Paypal> 
-
             </div>
-            <span  className="indicator" style={{left: `${payment === 'paypal' ? width <= 500 ? '7.1em' : '6.4em' : ''}`, width: `${payment === 'paypal' ? '6.8em' : ''}`}}></span>
+            <span  className="indicator" style={{left: `${payment === 'paypal' ? width <= 780 ? '7.3em' : '6.5em' : ''}`, width: `${payment === 'paypal' ? '6.8em' : ''}`}}></span>
           </div>
 
           <div className="bill-section">
