@@ -14,11 +14,11 @@ main {
     font-size: 0.75em;
   }
 } 
-/* @media only screen and (max-width: 780px) {
+@media only screen and (max-width: 780px) {
   main {
-    font-size: 0.8em;
+    font-size: 0.67em;
   }
-}  */
+} 
 @media only screen and (max-width: 500px) {
   main {
     font-size: 0.6em;
