@@ -10,6 +10,7 @@ nav .sidebar-btn {
   background: none;
   border: none;
   cursor: pointer;
+  position: relative;
 }
 nav .sidebar-btn svg {
   stroke: white;
@@ -18,6 +19,15 @@ nav .sidebar-btn svg {
 }
 nav .sidebar-btn svg:hover {
   stroke: #3582ff;
+}
+nav .notification {
+  width: 9px;
+  height: 9px;
+  border-radius: 8em;
+  position: absolute;
+  right: -5px;
+  top: 0;
+  background: #f94a3d;
 }
 nav .links{
   display: flex;

@@ -15,7 +15,10 @@ export default function navbar({location}) {
   return (
     <nav style={{justifyContent: `${loc.pathname === '/cart' ? '' : 'end'}`}}>
       { loc.pathname === '/cart' &&
-        <button className='sidebar-btn' onClick={() => setSidebarState(!sidebarState)}><HiOutlineShoppingCart size={20}/></button>
+        <button className='sidebar-btn' onClick={() => setSidebarState(!sidebarState)}>
+          <HiOutlineShoppingCart size={20}/>          
+          {!!cartCounter && <span className="notification"></span>}
+        </button>
       }
 
       <ul className="links">
