@@ -1,11 +1,9 @@
-import React, { useContext, useState } from 'react'
-import { ShopContext } from '../context/shopContext'
+import React, { useState } from 'react'
 import "./product.css"
 
 
 export default function product(props) {
   let cartData = props.data
-  const { cartItems, addToCart, newItems, setNewItems, cartCounter, setCartCounter, updateCount} = useContext(ShopContext)
 
   function updateCart(id) {
     setNewItems(

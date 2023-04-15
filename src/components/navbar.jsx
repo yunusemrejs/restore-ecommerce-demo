@@ -1,14 +1,12 @@
-import { useContext, useState } from 'react'
+import { useState } from 'react'
 import {AiOutlineShopping} from 'react-icons/ai'
 import { NavLink, useLocation } from 'react-router-dom'
-import { ShopContext } from '../context/shopContext'
 import {HiOutlineShoppingCart} from 'react-icons/hi'
 
 import './navbar.css'
 
 export default function navbar({location}) {
 
-  const {sumtTotal, cartCounter, sidebarState, setSidebarState} = useContext(ShopContext)
   const loc = useLocation()
 
   location(loc.pathname) 

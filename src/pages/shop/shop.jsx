@@ -1,7 +1,6 @@
 import { Products } from "../../products"
 import Product from "../../components/product"
-import { useContext, useState } from "react"
-import { ShopContext } from "../../context/shopContext"
+import { useState } from "react"
 import pay from '../../assets/paypal-logo-svgrepo-com.svg'
 import { SiReact } from "react-icons/si"
 import Heart from '../../assets/heart'
@@ -9,7 +8,6 @@ import './shop.css'
 
 export default function shop() {
   const [cartProducts, setCartProducts] = useState([])
-  const {newItems} = useContext(ShopContext)
 
   return (
     <>

@@ -1,13 +1,10 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import './cartProduct.css'
 import {AiOutlinePlus} from 'react-icons/ai'
-import { ShopContext } from '../context/shopContext'
 import Minus from '../assets/minus'
 import Plus from '../assets/plus'
 
 export default function cartProduct({img, name, cartItems, price, id, add, remove, del}) {
-
-  const {newItems, setNewItems, cartCounter, setCartCounter} = useContext(ShopContext)
 
   function plus(id) {
     setNewItems(

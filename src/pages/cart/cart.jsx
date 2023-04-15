@@ -1,6 +1,5 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import CartProduct from '../../components/cartProduct';
-import { ShopContext } from '../../context/shopContext'
 import { Products } from '../../products'
 import {HiOutlineShoppingCart} from 'react-icons/hi'
 import {SiVisa} from 'react-icons/si'
@@ -10,7 +9,6 @@ import Paypal from '../../assets/paypal';
 import './cart.css'
 
 export default function cart() {
-  const { cartItems, addToCart, removeFromCart, deleteFromCart, newItems, setNewItems, sidebarState, setSidebarState, setCartCounter, cartCounter} = useContext(ShopContext)
   const [ payment, setPayment ] = useState('visa')
 
   const width = window.innerWidth
