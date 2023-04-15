@@ -12,9 +12,10 @@ function App() {
     console.log('location: ', location)
     return location
   }
+  
   return (
     <div className="app">
-        <Router>
+        <Router basename='/restore-ecommerce-demo'>
           <Navbar location={getLocation}></Navbar>
           <main style={{fontSize: `${getLocation() === '/cart' && width <= 500 ? '0.7em !important' : ''}`}}>
             <Routes>
