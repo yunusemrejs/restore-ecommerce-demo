@@ -1,3 +1,3 @@
-# react-ecommerce-project
+# restore-ecommerce-demo
 
-A simple react ecommerce website :)
+ReStore JS state management library ecommerce project demo
