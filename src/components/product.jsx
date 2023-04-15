@@ -1,48 +1,38 @@
-import React, { useState } from 'react'
-import "./product.css"
+import React, {useState} from 'react';
+import './product.css';
+import ShoppingCartStore from '../store/ShoppingCartStore';
+import useStore from '../hooks/useStore';
 
+export default function product({data:cartData,newItems,cartProducts,setCartProducts}) {
+  const store = useStore(ShoppingCartStore, []);
 
-export default function product(props) {
-  let cartData = props.data
+  function addToCart(item) {
+		ShoppingCartStore.dispatch('addToCart', item);
+	}
 
-  function updateCart(id) {
-    setNewItems(
-      newItems.map((item) => {
-        if(item.id === id) {
-          let val = {...item, quantity: item.quantity + 1};
-          if(val.quantity <= 1){
-            setCartCounter(cartCounter + 1)}
-          return val
-        }
-        else
-          return item
-      })
-      )
- } 
+	return (
+		<div className="product">
+			<div className="image-container">
+				<img src={cartData.ProductImage} alt="clothing" />
+			</div>
 
-  return (
-    <div className='product'>
-      <div className="image-container">
-        <img src={props.data.ProductImage} alt="clothing" />
-      </div>
+			<div className="description">
+				<div className="name">
+					<p>{cartData.ProductName}</p>
+				</div>
 
-      <div className="description">
-        <div className="name">
-          <p>{props.data.ProductName}</p>
-        </div>
-
-        <div className="add">
-          <span>${props.data.ProductPrice}</span>
-          <button onClick={() => {
-            props.setCartProducts(props.cartProducts.concat({cartData})); 
-            addToCart(props.data.id);
-            updateCart(props.data.id)
-            }}>
-              Add to cart
-              { !!newItems[props.data.id - 1].quantity && ` (${newItems[props.data.id - 1].quantity})`}
-          </button>
-        </div>
-      </div>
-    </div>
-  )
+				<div className="add">
+					<span>${cartData.ProductPrice}</span>
+					<button
+						onClick={() => {
+							setCartProducts(cartProducts.concat({cartData}));
+							addToCart(cartData);
+						}}
+					>
+						Add to cart
+					</button>
+				</div>
+			</div>
+		</div>
+	);
 }

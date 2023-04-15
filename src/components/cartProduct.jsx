@@ -4,48 +4,7 @@ import {AiOutlinePlus} from 'react-icons/ai'
 import Minus from '../assets/minus'
 import Plus from '../assets/plus'
 
-export default function cartProduct({img, name, cartItems, price, id, add, remove, del}) {
-
-  function plus(id) {
-    setNewItems(
-      newItems.map((item) => {
-        if(item.id === id) {  
-          return {...item, quantity: item.quantity + 1};
-        }
-        else
-        return item
-      })
-    )
- } 
-
-  function minus(id) {
-    setNewItems(
-      newItems.map((item) => {
-        if(item.id === id) {
-          let val ={...item, quantity: item.quantity - 1};
-          if(val.quantity < 1){
-            setCartCounter(cartCounter - 1)}
-          return val
-        }
-        else
-        return item
-      })
-    )
- } 
-
-  function yeet(id) {
-    setNewItems(
-      newItems.map((item) => {
-        if(item.id === id) {
-          setCartCounter(cartCounter - 1)
-          return {...item, quantity: 0};
-        }
-        else
-        return item
-      })
-    )
- } 
-
+export default function cartProduct({img, name, cartItem, price, id, add, remove, del}) {
   return (
     <div className='cart-product-container'>
       <img src={img}/>
@@ -59,16 +18,16 @@ export default function cartProduct({img, name, cartItems, price, id, add, remov
 
         <div className="right-side-wrapper">
           <div className="price-options">
-            <span>${(price * cartItems).toFixed(2)}</span>
+            <span>${(price * cartItem.quantity).toFixed(2)}</span>
 
             <div className="quantity">
-              <button onClick={() => {remove(id); minus(id)}}><Minus/></button>
-                <p>{cartItems}</p>
-              <button onClick={() => {add(id); plus(id)}}><Plus/></button>
+              <button onClick={() => remove(cartItem)}><Minus/></button>
+                <p>{cartItem.quantity}</p>
+              <button onClick={() => add(cartItem)}><Plus/></button>
             </div>
           </div>
         
-          <button onClick={() => {del(id); yeet(id)}} className='cancel-btn'><AiOutlinePlus size={17}/></button>
+          <button onClick={() => del(cartItem)} className='cancel-btn'><AiOutlinePlus size={17}/></button>
         </div>
 
       </div>
