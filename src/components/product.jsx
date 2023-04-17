@@ -4,7 +4,7 @@ import ShoppingCartStore from '../store/ShoppingCartStore';
 import useStore from '../hooks/useStore';
 
 export default function product({data:cartData,newItems,cartProducts,setCartProducts}) {
-  const store = useStore(ShoppingCartStore, []);
+  const store = useStore(ShoppingCartStore, new Set());
 
   function addToCart(item) {
 		ShoppingCartStore.dispatch('addToCart', item);

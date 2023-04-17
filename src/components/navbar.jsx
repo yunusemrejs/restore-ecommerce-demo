@@ -8,7 +8,7 @@ import './navbar.css'
 
 export default function navbar({location}) {
   const loc = useLocation()
-  const store = useStore(ShoppingCartStore, []);
+  const store = useStore(ShoppingCartStore, new Set());
 
   function toggleSidebar() {
 		ShoppingCartStore.dispatch('toggleSidebarState');

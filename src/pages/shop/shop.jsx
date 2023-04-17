@@ -10,7 +10,7 @@ import { Products } from "../../products"
 
 export default function shop() {
   const [cartProducts, setCartProducts] = useState([])
-  const store = useStore(ShoppingCartStore, []);
+  const store = useStore(ShoppingCartStore, new Set());
 
   return (
     <>

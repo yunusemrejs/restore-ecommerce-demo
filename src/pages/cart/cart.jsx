@@ -12,7 +12,7 @@ import useStore from '../../hooks/useStore';
 
 export default function cart() {
 	const [payment, setPayment] = useState('visa');
-	const store = useStore(ShoppingCartStore, []);
+	const store = useStore(ShoppingCartStore, new Set());
 
 	const width = window.innerWidth;
 
