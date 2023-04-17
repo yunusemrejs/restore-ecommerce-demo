@@ -10,7 +10,7 @@ const useStore = (store : State, watchedStates: Set<keyof State>) => {
       callback(newState) {
         setState(newState);
       },
-    };
+    } as Listener;
     const listenerId = store.subscribe(listener);
     return () => store.unsubscribe(listenerId);
   }, []);

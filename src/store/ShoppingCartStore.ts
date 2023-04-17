@@ -46,14 +46,14 @@ const ShoppingCartStore = createStore({
         } else {
           state.cartItems[itemIndex].quantity -= 1;
         }
-        state.totalPrice -= itemToRemove.price;
+        state.totalPrice -= itemToRemove.ProductPrice;
       }
     },
     DELETE_FROM_CART(state, payload) {
       const itemIndex = state.cartItems.findIndex(item => item.itemId === payload.itemId);
       if (itemIndex !== -1) {
         const itemToRemove = state.cartItems[itemIndex];
-        state.totalPrice -= itemToRemove.price * itemToRemove.quantity;
+        state.totalPrice -= itemToRemove.ProductPrice * itemToRemove.quantity;
         state.cartCounter -= 1;
         state.cartItems.splice(itemIndex, 1);
       }
